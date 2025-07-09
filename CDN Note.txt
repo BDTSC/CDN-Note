@@ -15,6 +15,30 @@
   </script>
 <!-- Chosen Active -->-
 
+<!-- Script Tag Er Moddhe Assign Korte Hobe -->-
+// ❌ Icon clear
+      $("#icon-clear").on("click", function () {
+        $("#multiple").val([]).trigger("chosen:updated");
+      });
+
+      // ⏳ Auto clear after 5 seconds
+      $("#start-timer").on("click", function () {
+        setTimeout(function () {
+          $("#multiple").val([]).trigger("chosen:updated");
+          alert("Selections cleared automatically after 5 seconds!");
+        }, 5000);
+      });
+
+      // ⚠️ Confirm before clearing
+      $("#confirm-clear").on("click", function () {
+        if (confirm("Are you sure you want to clear all selected items?")) {
+          $("#multiple").val([]).trigger("chosen:updated");
+        }
+      });
+    });
+<!-- Script Tag Er Moddhe Assign Korte Hobe -->-
+      
+
 
 
 <!--Bootstrap CDN -->- 
